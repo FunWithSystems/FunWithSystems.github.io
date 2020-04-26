@@ -244,7 +244,13 @@ let goForward = function(){
         return;
     }
     currentPosition++;
-    loadChapterSection(currentPosition)
+    loadChapterSection(currentPosition);
+    ga('send', {
+        hitType: 'event',
+        eventCategory: 'Chapter',
+        eventAction: `Visited section ${currentPosition}`,
+        eventLabel: 'Beta 0.1'
+      });
 }
 
 let goBackward = function(){
@@ -253,6 +259,12 @@ let goBackward = function(){
     } 
     currentPosition--;
     loadChapterSection(currentPosition)
+    ga('send', {
+        hitType: 'event',
+        eventCategory: 'Chapter',
+        eventAction: `Visited section ${currentPosition}`,
+        eventLabel: 'Beta 0.1'
+      });
 }
 
 $('document').ready(() => {
