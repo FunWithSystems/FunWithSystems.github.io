@@ -239,18 +239,21 @@ $(document).on('keydown', function (e) {
     }
 });
 
+let sendEvent = function(currentPosition){
+    if ("ga" in window) {
+        tracker = ga.getAll()[0];
+        if (tracker)
+            tracker.send("event", "Visited Section", currentPosition);
+    }
+}
+
 let goForward = function(){
    if(currentPosition>=navigation.length-1){
         return;
     }
     currentPosition++;
     loadChapterSection(currentPosition);
-    ga('send', {
-        hitType: 'event',
-        eventCategory: 'Chapter',
-        eventAction: `Visited section ${currentPosition}`,
-        eventLabel: 'Beta 0.1'
-      });
+    sendEvent(currentPosition);
 }
 
 let goBackward = function(){
@@ -259,12 +262,7 @@ let goBackward = function(){
     } 
     currentPosition--;
     loadChapterSection(currentPosition)
-    ga('send', {
-        hitType: 'event',
-        eventCategory: 'Chapter',
-        eventAction: `Visited section ${currentPosition}`,
-        eventLabel: 'Beta 0.1'
-      });
+    sendEvent(currentPosition);
 }
 
 $('document').ready(() => {
