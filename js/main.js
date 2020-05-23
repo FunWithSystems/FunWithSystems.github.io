@@ -381,9 +381,11 @@ let generateTrigger = function (type, conditions, actions) {
 
 let initCanvas = function (url) {
     if(!canvas){
+    var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+    var height = (window.innerHeight > 0) ? window.innerHeight : screen.height;
     canvas = new fabric.Canvas('canvas');
-    canvas.setHeight(500);
-    canvas.setWidth(800);
+    canvas.setHeight(height);
+    canvas.setWidth(width);
     }
     restoreCanvas(url);
 }

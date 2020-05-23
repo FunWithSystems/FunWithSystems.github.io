@@ -1,0 +1,1331 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    @font-face {
+font-family: "ProximaNovaLight";
+src: url(fonts/ProximaNova-Light.woff) format("truetype");
+  }
+
+  @font-face {
+font-family: "agave-r";
+src: url(fonts/agave-r.ttf) ;
+  }
+    body{
+        font-family: "agave-r"
+    }
+
+  .nav-pills .nav-link.active {
+    color: white !important;
+    border-radius: 0px !important;
+
+  }
+
+  .nav-pills .nav-link {
+    color: black !important;
+  }
+
+  .component-item {
+    cursor: pointer;
+  }
+
+  ::-moz-color-swatch {
+    border: none;
+    padding: 0;
+
+  }
+
+  input[type="color"] {
+    -webkit-appearance: none;
+    border: none;
+    padding: 0;
+
+  }
+
+  input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0;
+  }
+
+  input[type="color"]::-webkit-color-swatch {
+    border: none;
+    padding: 0;
+
+  }
+
+  select:focus { 
+ border: none !important;
+ outline: none !important;
+}
+</style>
+  <style>
+    .person {
+      height: 20px;
+      position: relative;
+      margin-bottom: 15px;
+    }
+
+    .person .label {
+      text-align: left;
+      font-family: 'Montserrat'
+    }
+
+    .person .bar {
+      height: 20px;
+      background-color:white;
+      position: absolute;
+      left: 170px;
+    }
+
+    .person div {
+      display: inline-block;
+    }
+
+    .data-view {
+      padding: 10px;
+      color: #777;
+      font-size: 12px;
+      width: 700px;
+    }
+
+    .dperson {
+      height: 20px;
+      position: relative;
+      margin-bottom: 15px;
+    }
+
+    .dperson .dlabel {
+      text-align: left;
+      font-family: 'Montserrat'
+    }
+
+    .dperson .dbar {
+      height: 20px;
+      background-color:white;
+      position: absolute;
+      left: 170px;
+    }
+
+    .dperson div {
+      display: inline-block;
+    }
+
+    .ddata-view {
+      padding: 10px;
+      color: #777;
+      font-size: 12px;
+      width: 700px;
+    }
+
+
+    .slotperson {
+      height: 20px;
+      position: relative;
+      margin-bottom: 15px;
+    }
+
+    .slotperson .slotlabel {
+      text-align: left;
+      font-family: 'Montserrat'
+    }
+
+    .slotperson .slotbar {
+      height: 20px;
+      background-color:white;
+      position: absolute;
+      left: 170px;
+    }
+
+    .slotperson div {
+      display: inline-block;
+    }
+
+    .slotdata-view {
+      padding: 10px;
+      color: #777;
+      font-size: 12px;
+      width: 700px;
+    }
+
+    .slotbperson {
+      height: 20px;
+      position: relative;
+      margin-bottom: 15px;
+    }
+
+    .slotbperson .slotblabel {
+      text-align: left;
+      font-family: 'Montserrat'
+    }
+
+    .slotbperson .slotbbar {
+      height: 20px;
+      background-color:white;
+      position: absolute;
+      left: 170px;
+    }
+
+    .slotbperson div {
+      display: inline-block;
+    }
+
+    .slotbdata-view {
+      padding: 10px;
+      color: #777;
+      font-size: 12px;
+      width: 700px;
+    }
+
+  
+  </style>
+  <title>📺 Immersive Introduction to Probability</title>
+  <script  src="/js/utils/jquery.min.js"></script>
+  <script  src="/js/utils/bootstrap.min.js"></script>
+  <link rel="icon" href="/img/favicon.png" sizes="16x16" type="image/png">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <!-- <link
+    href="font.css"
+    rel="stylesheet"> import the webpage's stylesheet -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@500&display=swap" rel="stylesheet">
+
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet"> -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-164621859-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-164621859-1');
+</script>
+<script type="text/javascript">
+var slotA = 777;
+    function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
+}
+</script>
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/script.js"></script>
+  
+  <script>
+    $(document).ready(function () {
+
+      $('#casinoBalanceInput').val(500);
+      $('#PlayerPayoutOutput').val(0);
+      $('#desiredOutcomeText').val(1);
+      $('#possibleOutcomeText').val(2);
+      $('#desiredOutcomeText').on('input',function(e){
+        calculateOddsWithoutSelect();
+      });
+
+      $('#gameSelect').on('input',function(e){
+        calculateOdds();
+      });
+
+      $('#possibleOutcomeText').on('input',function(e){
+        calculateOddsWithoutSelect();
+      });
+   
+      calculateOdds();
+    });
+  </script>
+  <!-- import the webpage's client-side javascript file -->
+</head>
+
+<body>
+
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white " style="margin-bottom: 0!important;padding: 0!important;">
+
+        <a href="/"><img src="/img/logo_text.png"  height="70" style="margin-left: 1%; margin-bottom: 0%;" /></a> 
+        <h4 class="my-0 mr-md-auto font-weight-normal"></h4>
+        <nav class="my-2 my-md-0 mr-md-3">
+    
+    
+          <!-- <a class="p-2 text-dark" href="#"><i class="fas fa-mountain"></i> Mission</a> -->
+    
+        </nav>
+        <!-- <a class="btn btn-danger" href="#" style="margin-right: 1%;">Sign up</a> -->
+      </div>
+      <br/>      <br/>
+
+  <h1>
+    Immersive Introduction to Basic Probability
+  </h1>
+  <p style="padding:10px;font-family: 'Montserrat', serif; font-size:1.1em">
+    Hey there :) <br /> <br /> This is an immersive introduction to probability.  <br /> <br />
+    <!-- <img style="height:150px" src="https://assets-ouch.icons8.com/preview/650/dc8c9f7c-d054-4724-82ee-b2203aade256.png"><br/> -->
+    You have been hired by John to design games for his casino. You need to design the games in such a way that can maximize casinos profit and minimize its loss. However, it should also give enough rewards to players, so they are motivated to play. 
+
+    <br /> <br />
+
+    Let's go with a simple game, predicting a coin toss. Player needs to pay $10 to play this game, if they get the prediction right, they will be rewarded with $20. Let's simulate this game and see how well it goes for the casino; if this was played a thousand times. Go ahead and tap on the simulate button.
+  </p>
+
+  <div class="row d-flex justify-content-center">
+    <div class="col-lg-6 col-md-8" style="padding-right:0;padding-left: 0;">
+    <div class="col-md" style="padding-right:0;padding-left: 0;">
+      <div class="card text-white bg-dark mb-3"
+      style="font-family: 'Montserrat', serif;">
+      <div class="card-header">
+        📟 Coin Toss Simulator
+      </div>
+      <div class="card-body" style="overflow: scroll;">
+    <center> <small><div  id="console" style="font-family: 'Montserrat';color:white;">
+        </div></small></center><br/>
+        <div id="wrapper" >
+        </div>
+     
+        <br/>
+        <div class="dropdown-divider"></div>   <br/>
+          <div class="form-group">
+            <label for="exampleInputEmail1">💰 Casino Balance</label>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">$</span>
+              </div>
+              <input type="text" class="form-control" id="casinoBalanceInput" placeholder="500" value="500">
+             
+            </div>
+          </div>
+       
+          <div class="form-group">
+            <label for="exampleInputEmail1">📟 Simulations</label>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">#</span>
+              </div>
+              <input type="text" class="form-control" id="simulationInput" placeholder="1000" value="1000">
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <label for="exampleInputEmail1">💰 Player Payout</label>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">$</span>
+              </div>
+              <input type="text" class="form-control" id="PlayerPayoutOutput" placeholder="0" value="0" disabled />
+              
+            </div>
+          </div>
+          <button onClick="runSimulation();" class="btn btn-primary">🕹️ Simulate</button>
+  
+  
+      
+       
+      </div>
+    </div>    </div>
+   </div>
+
+  </div>
+
+
+
+  <!--       Visualization
+      Bar Charts  (Head, Tails, Player Win, Casino Win)
+      
+      Variables 
+      1. Casnio's Balance 
+      2. Player Payout 
+      3. Number of Simulations 
+      
+      Controls
+      Start Simulation -->
+
+  <script>
+
+    var names = ['🙂 Heads', '🐒 Tails', '🎰 Casino Wins', '🧔 Player Wins'];
+    var myData = [];
+    var barWidth = 80;
+    var barScale = d3.scaleLinear().domain([0, 1000]).range([0, barWidth]);
+
+    function randomInteger(n) {
+      return Math.floor(10 * Math.random());
+    }
+
+    function initialiseData() {
+      myData = [
+        {
+          "name": "🙂 Heads",
+          "score": 1,
+          "color":"#00BFFF"
+        },
+        {
+          "name": "🐒 Tails",
+          "score": 1,
+          "color":"#007bff"
+
+        }, {
+          "name": "🎰 Casino Wins",
+          "score": 1,
+          "color":"#f6f4f4"
+
+        },
+        {
+          "name": "🧔 Player Wins",
+          "score": 1,
+          "color":"#00FF00"
+
+        }
+      ];
+    }
+
+    function updateBars(data) {
+      var u = d3.select('#wrapper')
+        .selectAll('.person')
+        .data(data, function (d) {
+          return d.name;
+        });
+
+      var entering = u.enter()
+        .append('div')
+        .classed('person', true);
+
+      entering.append('div')
+        .classed('label', true)
+        .text(function (d) {
+          return d.name;
+        });
+
+
+      entering.append('div')
+        .classed('bar', true)
+
+      entering
+        .merge(u)
+        .select('.bar')
+        .transition()
+        .style('width', function (d) {
+          return barScale(d.score) + '%';
+        }).style('background-color', function(d){
+          return d.color;
+        });
+
+      u.exit().remove();
+    }
+
+    function updateDataView() {
+      d3.select('.data-view').text('Array: ' + JSON.stringify(myData));
+    }
+
+    function update() {
+      updateBars(myData);
+      updateDataView(myData);
+    }
+
+    function sleep(ms) {
+      return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    async function runSimulation() {
+      myData[0].score = 0;
+      myData[1].score = 0;
+      myData[2].score = 0;
+      myData[3].score = 0;
+      $('#PlayerPayoutOutput').val(0);
+      barScale = d3.scaleLinear().domain([0, $('#simulationInput').val()]).range([0, barWidth]);
+      for (i = 0; i <= $('#simulationInput').val(); i++) {
+        $('#casinoBalanceInput').val(parseInt($('#casinoBalanceInput').val()) + 10);
+        let toss = Math.floor(Math.random() * Math.floor(2));
+        let prediction = Math.floor(Math.random() * Math.floor(2));
+        if (toss) {
+          myData[0].score++;
+        } else {
+          myData[1].score++;
+        }
+        if (toss == prediction) {
+          myData[3].score++;
+          $('#PlayerPayoutOutput').val(parseInt($('#PlayerPayoutOutput').val()) + 20);
+          $('#casinoBalanceInput').val(parseInt($('#casinoBalanceInput').val()) - 20);
+        } else {
+          myData[2].score++;
+        }
+
+
+        update(myData);
+        let tossText = toss ? "heads" : "tails";
+        let predictionText = prediction ? "heads" : "tails";
+        let winner = toss == prediction ? "player wins!" : "casino wins!";
+        $('#console').text(`📟 Simulation #${i} : Toss is ${tossText}, player predicted ${predictionText}, ${winner}`);
+        await sleep(5);
+      }
+    }
+
+    initialiseData();
+    update(myData);
+  </script>
+<br/>
+  <p style="padding-left:10px;padding-right:10px;font-family: 'Montserrat', serif; font-size:1.1em">
+    As you can see, the difference between player wins and casino wins is marginal. This
+    doesn't make sense for the casino. Since they will be paying out more instead of making money. We need to drastically reduce the player's odds of winning. <br /><br />
+  </p>
+
+    <h4 style="margin-bottom: 10px;"> Counting probabilities</h4>
+    <p style="padding-left:10px;font-family: 'Montserrat';padding-right:10px;font-family: 'Montserrat', serif; font-size:1.1em">    So how do we calculate odds or probabilities? It's simple, divide the count of desired outcomes over total
+    possible outcomes. Didn't get it? Try out the probability calculator for different games. <br /> <br />
+
+  </p>
+
+<div class="row d-flex justify-content-center">
+    <div class="col-lg-6 col-md-8" style="padding-right:0;padding-left: 0;">
+    <div class="col-md" style="padding-right:0;padding-left: 0;">
+  <div class="card text-white bg-dark mb-3"
+  style="font-family: 'Montserrat', serif;">
+  <div class="card-header">
+    📟 Probability Calculator
+  </div>
+  <div class="card-body" style="overflow: scroll;">
+<center> <small><div  id="pieconsole" style="font-family: 'Montserrat';color:white;">
+    </div></small></center>
+    <br/>
+    <center>
+ <div id="pie" ></div></center>
+
+ <br/>
+    <div class="dropdown-divider"></div>   <br/>
+      <div class="form-group">
+        <label for="exampleInputEmail1">🎮 Game</label> <small style="float: right;">Change this to find probabilities for other games.</small>
+        <div class="input-group">
+         
+          <select class="form-control" id="gameSelect">
+            <option value="0">Coin Toss</option>
+            <option value="1">6 Sided Dice Roll</option>
+            <option value="2">12 Sided Dice Roll</option>
+            <option value="3">14 Sided Dice Roll</option>
+            <option value="4">20 Sided Dice Roll</option>
+          </select>         
+        </div>
+      </div>
+   
+      <div class="form-group">
+        <label for="desiredOutcomeText">🙂 Desired Outcomes Count</label>
+        <div class="input-group">
+        
+          <input type="text" class="form-control" id="desiredOutcomeText" placeholder="1" value="1">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="possibleOutcomeText">🔢 Total Possible Outcomes</label>
+        <div class="input-group">
+         
+          <input type="text" class="form-control" id="possibleOutcomeText" placeholder="2" value="2" />
+          
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="oddsText">🔮 Odds</label>
+        <div class="input-group">
+         
+          <input type="text" class="form-control" id="oddsText" placeholder="1/2 or 50%" value="1/2 or 50%" />
+          
+        </div>
+      </div>
+      <button onClick="calculateOdds();" class="btn btn-primary">🔘 Calculate</button>
+
+
+  
+   
+  </div>
+</div> </div>
+</div>
+
+</div>
+<br />
+<p style="padding-left:10px;padding-right:10px;font-family: 'Montserrat', serif; font-size:1.1em">
+  The player has least odds of winning in predicting the outcome of a 20 sided dice roll. Since the probability is 1/20 or 5%. This game has drastically reduced the player's chance of winning from earlier 50% to 5%. 
+ <br /> <br />
+ So what about casino's chance of winning in every game? How do we calculate those odds? Logically, if a player is loosing, then the casino is winning. Since the player's odds of winning is only 5%, the rest 95% of odds are in favour of the casino.
+ <br /> <br />
+ Are you excited to see how much money the casino can make with these new games? Go ahead and try the 'Dice Roll Simulator'.
+</p>
+
+<div class="row d-flex justify-content-center">
+  <div class="col-lg-6 col-md-8" style="padding-right:0;padding-left: 0;">
+
+  <div class="col-md" style="padding-right:0;padding-left: 0;">
+    <div class="card text-white bg-dark mb-3"
+    style="font-family: 'Montserrat', serif;">
+    <div class="card-header">
+      🎲 Dice Roll Simulator
+    </div>
+    <div class="card-body" style="overflow: scroll;">
+  <center> <small><div  id="diceRollConsole" style="font-family: 'Montserrat';color:white;overflow: scroll;">
+      </div></small></center><br/>
+      <div id="diceRollWrapper" >
+      </div>
+      <br/>
+      <div class="dropdown-divider"></div>   <br/>
+      <div class="form-group">
+        <label for="exampleInputEmail1">🎮 Game</label> 
+        <div class="input-group">
+         
+          <select class="form-control" id="diceRollGameSelect">
+            <option value="0">6 Sided Dice Roll</option>
+            <option value="1">12 Sided Dice Roll</option>
+            <option value="2">14 Sided Dice Roll</option>
+            <option value="3">20 Sided Dice Roll</option>
+          </select>         
+        </div>
+      </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">💰 Casino Balance</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">$</span>
+            </div>
+            <input type="text" class="form-control" id="dcasinoBalanceInput" placeholder="500" value="500">
+           
+          </div>
+        </div>
+     
+        <div class="form-group">
+          <label for="exampleInputEmail1">📟 Simulations</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">#</span>
+            </div>
+            <input type="text" class="form-control" id="dsimulationInput" placeholder="1000" value="1000">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="exampleInputEmail1">💰 Player Payout</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">$</span>
+            </div>
+            <input type="text" class="form-control" id="dPlayerPayoutOutput" placeholder="0" value="0" disabled />
+            
+          </div>
+        </div>
+        <button onClick="runDiceSimulation();" class="btn btn-primary">🕹️ Simulate</button>
+     
+    </div>
+  </div>    </div>
+ </div>
+
+</div>
+
+<p  style="padding-left:10px;padding-right:10px;font-family: 'Montserrat', serif; font-size:1.1em">
+   As you can see, knowing probabilities pays off well. However, predicting dice rolls is not an appealing game since players know their chance of winning is less.
+  
+</p><br/>
+<h4 style="margin-bottom: 10px;">  Probabilities of Multiple Events</h4> 
+<p style="padding-left:10px;padding-right:10px;font-family: 'Montserrat', serif; font-size:1.1em">
+  Good casino games should give hopes to the player they can win. As they play, giving them a feeling they almost won, will motivate them to try more.
+  
+ The slot machine is an example of such a game. Let's learn about calculating probabilities of multiple events with a simulated slot machine.</p>
+
+ <br/> 
+ <h4 style="margin-bottom: 10px;">  AND Probability</h4> 
+
+ <p style="padding-left:10px;padding-right:10px;font-family: 'Montserrat', serif; font-size:1.1em">
+
+ Here's a simple slot machine with three slots. Each slot generates a random number between 1 & 7. The player wins $100 if all three slots hit 7. So how do we calculate
+ odds of all three slots hitting 7? <br/><br/>Here we need to find the probability of the first slot hitting 7 <b>AND</b> second slot hitting 7 <b>AND</b> third slot hitting 7. To find AND probability of multiple events, we need to multiply probabilities of individual events.
+ <br/><br/>That is, probability of the first slot hitting 7 *  probability of second slot hitting 7 *  probability of the third slot hitting 7.  From counting probabilities, we know that odds of individual slot hitting 7 is 1/7 <small>(Desired Outcome Count/Total Possible Outcomes)</small>.
+ <br/><br/> Hence the probability of all three slots hitting 7 is 1/7 * 1/7 * 1/7. Go ahead and try the simulator.
+</p>
+ <div class="row d-flex justify-content-center" >
+   <div class="col-lg-6 col-md-8"  style="padding-right:0;padding-left: 0;">
+  <div class="col-md" style="padding-right:0;padding-left: 0;">
+<div class="card text-white bg-dark mb-3"
+style="font-family: 'Montserrat', serif;">
+<div class="card-header">
+  📟 Slot Machine Simulator
+</div>
+<div class="card-body" style="overflow: scroll;">
+  <center>
+  <small><div  id="slotConsole" style="font-family: 'Montserrat';color:white;">
+  </div></small></center>
+  <center>
+    <svg width="400px" >
+      <g transform="translate(70, 70)">
+        <g class="itema" transform="translate(0, 0)"></g>
+        <g class="itema" transform="translate(120, 0)"></g>
+        <g class="itema" transform="translate(240, 0)"></g>
+      </g>
+    </svg>
+
+    <script>
+      function addNumberedCircle(d, i) {
+        let slotArray = slotA.toString();
+        d3.select(this)
+          .append('circle')
+          .style('fill','#ffc107')
+          .attr('r', 30);
+      
+        d3.select(this)
+          .append('text')
+          .text(function(){
+            return slotArray[i];
+          })
+          .style("font-weight","bold")
+          .style("text-anchor", "middle")
+          .style("dominant-baseline","central");
+      }
+      
+      d3.selectAll('g.itema')
+        .each(addNumberedCircle);
+      
+        </script>
+</center>
+
+<div id="slotWrapper" >
+</div>
+
+<br/>
+  <div class="dropdown-divider"></div>   <br/>
+   
+ 
+
+    <div class="form-group">
+      <label for="singleSlotProbability">🔢 Odds of getting 7 on a single slot</label>
+      <div class="input-group">
+       
+        <input type="text" class="form-control" id="singleSlotProbability"  value="1/7 or 7.14%" disabled/>
+        
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="slotOddsText">🔮 Odds of getting 7 on all three slots</label>
+      <div class="input-group">
+       
+        <input type="text" class="form-control" id="slotOddsText" " value="(1/7 * 1/7 * 1/7) or 0.29%" disabled/>
+
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">💰 Casino Balance</label>
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">$</span>
+        </div>
+        <input type="text" class="form-control" id="slotCasinoBalanceInput" placeholder="500" value="500">
+       
+      </div>
+    </div>
+ 
+    <div class="form-group">
+      <label for="exampleInputEmail1">📟 Simulations</label>
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">#</span>
+        </div>
+        <input type="text" class="form-control" id="slotSimulationInput" placeholder="1000" value="1000">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="exampleInputEmail1">💰 Player Payout</label>
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">$</span>
+        </div>
+        <input type="text" class="form-control" id="slotPlayerPayoutOutput" placeholder="0" value="0" disabled />
+        
+      </div>
+    </div>
+    <button onClick="runSlotSimulation();" class="btn btn-primary">🕹️ Simulate</button>
+
+</div>
+</div> </div>
+</div>
+</div>
+
+<p style="padding-left:10px;padding-right:10px;font-family: 'Montserrat', serif; font-size:1.1em">
+A good game should give hopes to the player that they have a chance in the game.</i> In our slot machine, the player gets hope when two slots hit 7, or at least one slot hits 7.  Probability of two slots hitting 7 can be calculated with AND probability. However, let's focus on finding the probability of either one of the slots hitting 7.
+<br/> <br/></p>
+  <h4 style="margin-bottom: 10px;">  OR Probability</h4> 
+  <p style="padding-left:10px;padding-right:10px;font-family: 'Montserrat', serif; font-size:1.1em">
+
+Here, we need to find the probability of the first slot hitting 7 <b>OR </b> second slot hitting 7 <b>OR </b> third slot hitting 7. This can be calculated by summing up individual slot probabilities and subtracting it with the product of individual slot probabilities. <br/> <br/> 
+<small>That is, (Probability of First Slot Hitting 7 + Probability of Second Slot Hitting 7 + Probability of Third Slot Hitting 7) - (Probability of First Slot Hitting 7 * Probability of Second Slot Hitting 7 * Probability of Third Slot Hitting 7).</small>
+<br/><br/>
+In our case, (1/7 + 1/7 + 1/7) - (1/7 * 1/7 * 1/7). Go ahead and try the simulator.
+
+ </p>
+
+ <div class="row d-flex justify-content-center" >
+  <div class="col-lg-6 col-md-8"  style="padding-right:0;padding-left: 0;">
+ <div class="col-md" style="padding-right:0;padding-left: 0;">
+<div class="card text-white bg-dark mb-3"
+style="font-family: 'Montserrat', serif;">
+<div class="card-header">
+ 📟 Slot Machine Simulator
+</div>
+<div class="card-body" style="overflow: scroll;">
+ <center>
+ <small><div  id="slotBConsole" style="font-family: 'Montserrat';color:white;">
+ </div></small></center>
+ <center>
+   <svg width="400px" >
+     <g transform="translate(70, 70)">
+       <g class="itemb" transform="translate(0, 0)"></g>
+       <g class="itemb" transform="translate(120, 0)"></g>
+       <g class="itemb" transform="translate(240, 0)"></g>
+     </g>
+   </svg>
+
+   <script>
+     function addNumberedCircle(d, i) {
+       let slotArray = slotA.toString();
+       d3.select(this)
+         .append('circle')
+         .style('fill','#ffc107')
+         .attr('r', 30);
+     
+       d3.select(this)
+         .append('text')
+         .text(function(){
+           return slotArray[i];
+         })
+         .style("font-weight","bold")
+         .style("text-anchor", "middle")
+         .style("dominant-baseline","central");
+     }
+     
+     d3.selectAll('g.itemb')
+       .each(addNumberedCircle);
+     
+       </script>
+</center>
+
+<div id="slotBWrapper" >
+</div>
+
+<br/>
+ <div class="dropdown-divider"></div>   <br/>
+  
+
+
+   <div class="form-group">
+     <label for="singleSlotProbability">🔢 Odds of getting 7 on either one of the three slots</label>
+     <div class="input-group">
+      
+       <input type="text" class="form-control" id="singleSlotBProbability"  value="(1/7 + 1/7 + 1/7)-(1/7 * 1/7 * 1/7) or 42%" disabled/>
+       
+     </div>
+   </div>
+
+   <div class="form-group">
+     <label for="slotOddsText">🔮 Odds of getting 7 on all three slots</label>
+     <div class="input-group">
+      
+       <input type="text" class="form-control" id="slotBOddsText" " value="(1/7 * 1/7 * 1/7) or 0.29%" disabled/>
+
+     </div>
+   </div>
+   <div class="form-group">
+     <label for="exampleInputEmail1">💰 Casino Balance</label>
+     <div class="input-group">
+       <div class="input-group-prepend">
+         <span class="input-group-text">$</span>
+       </div>
+       <input type="text" class="form-control" id="slotBCasinoBalanceInput" placeholder="500" value="500">
+      
+     </div>
+   </div>
+
+   <div class="form-group">
+     <label for="exampleInputEmail1">📟 Simulations</label>
+     <div class="input-group">
+       <div class="input-group-prepend">
+         <span class="input-group-text">#</span>
+       </div>
+       <input type="text" class="form-control" id="slotBSimulationInput" placeholder="1000" value="1000">
+     </div>
+   </div>
+
+   <div class="form-group">
+     <label for="exampleInputEmail1">💰 Player Payout</label>
+     <div class="input-group">
+       <div class="input-group-prepend">
+         <span class="input-group-text">$</span>
+       </div>
+       <input type="text" class="form-control" id="slotBPlayerPayoutOutput" placeholder="0" value="0" disabled />
+       
+     </div>
+   </div>
+   <button onClick="runSlotSimulationB();" class="btn btn-primary">🕹️ Simulate</button>
+
+</div>
+</div> </div>
+</div>
+</div>
+
+<p style="padding-left:10px;padding-right:10px;font-family: 'Montserrat', serif; font-size:1.1em">
+Congrats, you have learned to count probability and calculate probabilities of multiple events with logical AND, OR operators. If you are interested in the upcoming chapters on probability, <a href="http://eepurl.com/g1aJ_f" target="_blank" >sign up here</a>.
+   </p>
+
+   
+<script>
+
+  var names = [ '🎰 Casino Wins', '🧔 Player Wins', '7️⃣ 7 on Either Slots'];
+  var slotBData = [];
+  var slotbbarWidth = 60;
+  var slotbbarScale = d3.scaleLinear().domain([0, 1000]).range([0, slotbbarWidth]);
+
+  function randomInteger(n) {
+    return Math.floor(10 * Math.random());
+  }
+
+  function slotbinitialiseData() {
+    slotBData = [
+      {
+        "name": "🎰 Casino Wins",
+        "score": 1,
+        "color":"#f6f4f4"
+
+      },
+      {
+        "name": "🧔 Player Wins",
+        "score": 1,
+        "color":"#00FF00"
+
+      },
+      {
+        "name": "7️⃣ 7 on Either Slots",
+        "score": 1,
+        "color":"#00BFFF"
+      }
+    ];
+  }
+
+  function slotbupdateBars(data) {
+    var u = d3.select('#slotBWrapper')
+      .selectAll('.slotbperson')
+      .data(data, function (d) {
+        return d.name;
+      });
+
+    var entering = u.enter()
+      .append('div')
+      .classed('slotbperson', true);
+
+    entering.append('div')
+      .classed('slotblabel', true)
+      .text(function (d) {
+        return d.name;
+      });
+
+
+    entering.append('div')
+      .classed('slotbbar', true)
+
+    entering
+      .merge(u)
+      .select('.slotbbar')
+      .transition()
+      .style('width', function (d) {
+        return barScale(d.score) + '%';
+      }).style('background-color', function(d){
+        return d.color;
+      });
+
+    u.exit().remove();
+  }
+
+  function slotbupdateDataView() {
+    d3.select('.slotbdata-view').text('Array: ' + JSON.stringify(slotBData));
+  }
+
+  function slotbupdate() {
+    slotbupdateBars(slotBData);
+    slotbupdateDataView(slotBData);
+  }
+
+  function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
+
+
+  var gameRanges = [{min:1,max:7},{min:1,max:13},{min:1,max:15},{min:1,max:21}];
+
+  async function runSlotSimulationB() {
+    slotBData[0].score = 0;
+    slotBData[1].score = 0;
+
+    $('#slotBPlayerPayoutOutput').val(0);
+    barScale = d3.scaleLinear().domain([0, $('#slotBSimulationInput').val()]).range([0, slotbbarWidth]);
+    for (i = 0; i <= $('#slotBSimulationInput').val(); i++) {
+      $('#slotBConsole').text(`📟 Simulation #${i}`);
+      $('#slotBCasinoBalanceInput').val(parseInt($('#slotBCasinoBalanceInput').val()) + 10);
+      let firstSlot = getRandomInt(1,8);
+      let secondSlot = getRandomInt(1,8);
+      let thirdSlot = getRandomInt(1,8);
+      let slot = parseInt(`${firstSlot}${secondSlot}${thirdSlot}`);
+      slotA = slot;
+      console.log(slot);
+      d3.selectAll('g.itemb')
+        .each(addNumberedCircle);
+
+      if(slot.toString().includes(7)){
+        slotBData[2].score++;
+      }
+
+      if (slot == 777) {
+        slotBData[1].score++;
+        $('#slotBPlayerPayoutOutput').val(parseInt($('#slotBPlayerPayoutOutput').val()) + 100);
+        $('#slotBCasinoBalanceInput').val(parseInt($('#slotBCasinoBalanceInput').val()) - 100);
+        $('#slotBConsole').text(`📟 Simulation #${i}, Player Wins $100 🎉`);
+
+        await sleep(2000);
+
+      } else {
+        slotBData[0].score++;
+      }
+      slotbupdate(slotBData);
+      await sleep(5);
+    }
+  }
+
+  slotbinitialiseData();
+  slotbupdate(slotBData);
+</script>
+
+
+<script>
+
+  var names = [ '🎰 Casino Wins', '🧔 Player Wins'];
+  var slotData = [];
+  var slotbarWidth = 60;
+  var slotbarScale = d3.scaleLinear().domain([0, 1000]).range([0, slotbarWidth]);
+
+  function randomInteger(n) {
+    return Math.floor(10 * Math.random());
+  }
+
+  function slotinitialiseData() {
+    slotData = [
+      {
+        "name": "🎰 Casino Wins",
+        "score": 1,
+        "color":"#f6f4f4"
+
+      },
+      {
+        "name": "🧔 Player Wins",
+        "score": 1,
+        "color":"#00FF00"
+
+      }
+    ];
+  }
+
+  function slotupdateBars(data) {
+    var u = d3.select('#slotWrapper')
+      .selectAll('.slotperson')
+      .data(data, function (d) {
+        return d.name;
+      });
+
+    var entering = u.enter()
+      .append('div')
+      .classed('slotperson', true);
+
+    entering.append('div')
+      .classed('slotlabel', true)
+      .text(function (d) {
+        return d.name;
+      });
+
+
+    entering.append('div')
+      .classed('slotbar', true)
+
+    entering
+      .merge(u)
+      .select('.slotbar')
+      .transition()
+      .style('width', function (d) {
+        return barScale(d.score) + '%';
+      }).style('background-color', function(d){
+        return d.color;
+      });
+
+    u.exit().remove();
+  }
+
+  function slotupdateDataView() {
+    d3.select('.slotdata-view').text('Array: ' + JSON.stringify(slotData));
+  }
+
+  function slotupdate() {
+    slotupdateBars(slotData);
+    slotupdateDataView(slotData);
+  }
+
+  function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
+
+
+  var gameRanges = [{min:1,max:7},{min:1,max:13},{min:1,max:15},{min:1,max:21}];
+
+  async function runSlotSimulation() {
+    slotData[0].score = 0;
+    slotData[1].score = 0;
+
+    $('#slotPlayerPayoutOutput').val(0);
+    barScale = d3.scaleLinear().domain([0, $('#slotSimulationInput').val()]).range([0, slotbarWidth]);
+    for (i = 0; i <= $('#slotSimulationInput').val(); i++) {
+      $('#slotConsole').text(`📟 Simulation #${i}`);
+      $('#slotCasinoBalanceInput').val(parseInt($('#slotCasinoBalanceInput').val()) + 10);
+      let firstSlot = getRandomInt(1,8);
+      let secondSlot = getRandomInt(1,8);
+      let thirdSlot = getRandomInt(1,8);
+      let slot = parseInt(`${firstSlot}${secondSlot}${thirdSlot}`);
+      slotA = slot;
+      console.log(slot);
+      d3.selectAll('g.itema')
+        .each(addNumberedCircle);
+
+      if (slot == 777) {
+        slotData[1].score++;
+        $('#slotPlayerPayoutOutput').val(parseInt($('#slotPlayerPayoutOutput').val()) + 100);
+        $('#slotCasinoBalanceInput').val(parseInt($('#slotCasinoBalanceInput').val()) - 100);
+        $('#slotConsole').text(`📟 Simulation #${i}, Player Wins $100 🎉`);
+
+        await sleep(2000);
+
+      } else {
+        slotData[0].score++;
+      }
+      slotupdate(slotData);
+      await sleep(5);
+    }
+  }
+
+  slotinitialiseData();
+  slotupdate(slotData);
+</script>
+
+<script type="text/javascript">
+ function slotMachineSimulate(){
+      d3.selectAll('g.itema')
+        .each(addNumberedCircle);
+    }
+$(document).ready(function(){
+
+
+  // $('#slotSelect').on('input',function(e){
+  //       calculateSlotOdds();
+  //   });
+  // function calculateSlotOdds(){
+  //       $('#singleSlotProbability').val(`1/${$('#slotSelect').val()} or ${((1/$('#slotSelect').val())*100).toFixed(2)}%`);
+  //       $('#slotOddsText').val(`(1/${$('#slotSelect').val()} * 1/${$('#slotSelect').val()} * 1/${$('#slotSelect').val()}) = ${(Math.pow(1/$('#slotSelect').val(),3)).toFixed(5)}%`);
+  //   }
+
+    // setInterval(function(){slotMachineSimulate();},1000);
+  
+
+
+});
+
+</script>
+
+<!--       Visualization
+    Bar Charts  (Head, Tails, Player Win, Casino Win)
+    
+    Variables 
+    1. Casnio's Balance 
+    2. Player Payout 
+    3. Number of Simulations 
+    
+    Controls
+    Start Simulation -->
+
+<script>
+
+  var names = [ '🎰 Casino Wins', '🧔 Player Wins'];
+  var diceRollData = [];
+  var barWidth = 60;
+  var barScale = d3.scaleLinear().domain([0, 1000]).range([0, barWidth]);
+
+  function randomInteger(n) {
+    return Math.floor(10 * Math.random());
+  }
+
+  function dinitialiseData() {
+    diceRollData = [
+      {
+        "name": "🎰 Casino Wins",
+        "score": 1,
+        "color":"#f6f4f4"
+
+      },
+      {
+        "name": "🧔 Player Wins",
+        "score": 1,
+        "color":"#00FF00"
+
+      }
+    ];
+  }
+
+  function dupdateBars(data) {
+    var u = d3.select('#diceRollWrapper')
+      .selectAll('.dperson')
+      .data(data, function (d) {
+        return d.name;
+      });
+
+    var entering = u.enter()
+      .append('div')
+      .classed('dperson', true);
+
+    entering.append('div')
+      .classed('dlabel', true)
+      .text(function (d) {
+        return d.name;
+      });
+
+
+    entering.append('div')
+      .classed('dbar', true)
+
+    entering
+      .merge(u)
+      .select('.dbar')
+      .transition()
+      .style('width', function (d) {
+        return barScale(d.score) + '%';
+      }).style('background-color', function(d){
+        return d.color;
+      });
+
+    u.exit().remove();
+  }
+
+  function dupdateDataView() {
+    d3.select('.ddata-view').text('Array: ' + JSON.stringify(diceRollData));
+  }
+
+  function dupdate() {
+    dupdateBars(diceRollData);
+    dupdateDataView(diceRollData);
+  }
+
+  function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
+
+
+  var gameRanges = [{min:1,max:7},{min:1,max:13},{min:1,max:15},{min:1,max:21}];
+
+  async function runDiceSimulation() {
+    diceRollData[0].score = 0;
+    diceRollData[1].score = 0;
+    $('#PlayerPayoutOutput').val(0);
+    barScale = d3.scaleLinear().domain([0, $('#dsimulationInput').val()]).range([0, barWidth]);
+    for (i = 0; i <= $('#dsimulationInput').val(); i++) {
+      $('#dcasinoBalanceInput').val(parseInt($('#dcasinoBalanceInput').val()) + 10);
+      let roll = getRandomInt(gameRanges[$("#diceRollGameSelect").val()].min,gameRanges[$("#diceRollGameSelect").val()].max);
+      let prediction = getRandomInt(gameRanges[$("#diceRollGameSelect").val()].min,gameRanges[$("#diceRollGameSelect").val()].max);
+    
+      if (roll == prediction) {
+        diceRollData[1].score++;
+        $('#dPlayerPayoutOutput').val(parseInt($('#dPlayerPayoutOutput').val()) + 20);
+        $('#dcasinoBalanceInput').val(parseInt($('#dcasinoBalanceInput').val()) - 20);
+      } else {
+        diceRollData[0].score++;
+      }
+
+
+      dupdate(diceRollData);
+      let winner = roll == prediction ? "player wins!" : "casino wins!";
+      $('#diceRollConsole').text(`📟 Simulation #${i} : Roll : ${roll}, Player : ${prediction}`);
+      await sleep(5);
+    }
+  }
+
+  dinitialiseData();
+  dupdate(diceRollData);
+</script>
+
+
+
+<script>
+    var radius = 100;
+  
+  var svg = d3.select("#pie")
+.append("svg")
+  .attr("width", 200)
+  .attr("height", 200)
+.append("g")
+  .attr("transform", "translate(" + 200 / 2 + "," + 200 / 2 + ")");
+
+  
+
+var data = {a: 9, b: 20};
+  var color = d3.scaleOrdinal()
+.domain(data)
+.range(["#00FF00", "#f6f4f4"])
+
+// Compute the position of each group on the pie:
+let updatePie = function(){
+
+  var pie = d3.pie()
+.value(function(d) {return d.value; })
+var data_ready = pie(d3.entries(data));
+  svg
+.selectAll('whatever')
+.data(data_ready)
+.enter()
+.append('path')
+.attr('d', d3.arc()
+  .innerRadius(0)
+  .outerRadius(radius)
+).attr('fill', function(d){ return(color(d.data.key)) });
+
+
+
+}
+
+updatePie();
+
+
+function round_to_precision(x, precision) {
+    var y = +x + (precision === undefined ? 0.5 : precision/2);
+    return y - (y % (precision === undefined ? 1 : +precision));
+}
+
+var outcomes = [{desiredOutcome:1,possibleOutcomes:2,text:"Player can only call heads or tails, so the desired outcome count is 1. Total possible outcomes are 2 (heads & tails). Hence the odds of player's win is 1/2 or 50%. "},{desiredOutcome:1,possibleOutcomes:6,text:"Player can only call a number from 1 to 6, so the desired outcome count is 1. There are 6 total possible outcomes . Hence the odds of player's win is 1/6 or 16%."},{desiredOutcome:1,possibleOutcomes:12,text:"Player can only call a number from 1 to 12, so the desired outcome count is 1. There are 12 total possible outcomes . Hence the odds of player's win is 1/12 or 8%."},{desiredOutcome:1,possibleOutcomes:14,text:"Player can only call a number from 1 to 14, so desired outcome count is 1. There are fourteen total possible outcomes . Hence the odds of player's win is 1/14 or 7%."},{desiredOutcome:1,possibleOutcomes:20,text:"Player can only call a number from 1 to 20, so the desired outcome count is 1. There are 20 total possible outcomes . Hence the odds of player's win is 1/20 or 5%."}]
+
+function calculateOdds(){
+  $('#desiredOutcomeText').val(outcomes[$("#gameSelect").val()].desiredOutcome);
+  $('#possibleOutcomeText').val(outcomes[$("#gameSelect").val()].possibleOutcomes);
+  let odds = parseFloat($('#desiredOutcomeText').val()/ $('#possibleOutcomeText').val()*100).toFixed(2);
+  $("#oddsText").val(`${$('#desiredOutcomeText').val()}/${$('#possibleOutcomeText').val()} or ${odds}%`);
+  data.a = odds; 
+  data.b = 100-odds;
+  updatePie();
+  $('#pieconsole').text(outcomes[$("#gameSelect").val()].text);
+
+}
+
+function calculateOddsWithoutSelect(){
+  let odds = parseFloat($('#desiredOutcomeText').val()/ $('#possibleOutcomeText').val()*100).toFixed(2);
+  $("#oddsText").val(`${$('#desiredOutcomeText').val()}/${$('#possibleOutcomeText').val()} or ${odds}%`);
+  data.a = odds; 
+  data.b = 100-odds;
+  updatePie();
+}
+</script>
+
+</body>
+
+</html>
