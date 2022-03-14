@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>FunWithSystems | How I created a UI/UX team in a SaaS startup without any background in design</title>
+  <meta name="description" content="The calling to venture into design">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="How I created a UI/UX team in a SaaS startup without any background in design">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://funwithsystems.com/posts/design-calling">
+  <meta property="og:description" content="The calling to venture into design">
+  <meta property="og:site_name" content="FunWithSystems">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:url" content="https://funwithsystems.com/posts/design-calling">
+  <meta name="twitter:title" content="How I created a UI/UX team in a SaaS startup without any background in design">
+  <meta name="twitter:description" content="The calling to venture into design">
+
+  
+    
+      <meta property="og:image" content="https://funwithsystems.com/assets/design-calling-fe35247efe6df7525dce524190e32d8b5734c23b942a86a9ab6e1ee7e222fd28.jpg">
+      <meta name="twitter:image" content="https://funwithsystems.com/assets/design-calling-fe35247efe6df7525dce524190e32d8b5734c23b942a86a9ab6e1ee7e222fd28.jpg">
+    
+  
+
+  <link href="https://funwithsystems.com/feed.xml" type="application/rss+xml" rel="alternate" title="FunWithSystems Last 10 blog posts" />
+
+  
+
+  
+
+    
+      <link rel="icon" type="image/x-icon" href="/assets/favicon-light-dcb102db85c5ad2285f0aa0815f56e50b63f939c5af14ddfb821a272513b4b61.ico">
+      <link rel="apple-touch-icon" href="/assets/apple-touch-icon-light-87d1f2a3a19b1500e5c1626a0492025ca5f7f97d24540dc5900288e92112925a.png">
+      <link rel="stylesheet" type="text/css" title="light" id="light" href="/assets/light-bb1553a18d0f1ccfe1aabc010584c49b4277a88503216b78906ba719e30019c1.css">
+      <link rel="stylesheet" type="text/css" title="dark" id="dark" href="/assets/dark-831218bc9e41aef39ee6a0bae4501195bccafcc13101ae2b9cd20493a6ec04c0.css" disabled="true">
+    
+
+  
+
+</head>
+
+<body>
+  <main>
+    <div class="grid grid-centered">
+      <div class="grid-cell">
+        <nav class="header-nav scrollappear">
+  <a href="/" class="header-logo" title="FunWithSystems">FunWithSystems</a>
+  <ul class="header-links">
+    
+    
+      <li>
+        <a href="https://twitter.com/heyfebin" rel="noreferrer noopener" target="_blank" title="Twitter">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-twitter">
+  <use href="/assets/twitter-8842c33965263ad1b03a978406826677a668f94125d5837e70ab83f24b3213a7.svg#icon-twitter" xlink:href="/assets/twitter-8842c33965263ad1b03a978406826677a668f94125d5837e70ab83f24b3213a7.svg#icon-twitter"></use>
+</svg>
+
+        </a>
+      </li>
+    
+    
+    
+    
+      <li>
+        <a href="https://github.com/jamesfebin" rel="noreferrer noopener" target="_blank" title="GitHub">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-github">
+  <use href="/assets/github-094f81040819f34343ee6ffff0980f17e2807b08b595eaaf66ae3554934fd78d.svg#icon-github" xlink:href="/assets/github-094f81040819f34343ee6ffff0980f17e2807b08b595eaaf66ae3554934fd78d.svg#icon-github"></use>
+</svg>
+
+        </a>
+      </li>
+    
+    
+    
+    
+    
+    
+    
+      <li>
+        <a href="https://www.linkedin.com/in/febinjohnjames" rel="noreferrer noopener" target="_blank" title="LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-linkedin">
+  <use href="/assets/linkedin-cdc5c107044324a3dfbea2e9ead15873f8dee304c37d73a046988956b706256e.svg#icon-linkedin" xlink:href="/assets/linkedin-cdc5c107044324a3dfbea2e9ead15873f8dee304c37d73a046988956b706256e.svg#icon-linkedin"></use>
+</svg>
+
+        </a>
+      </li>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      <li>
+        <a href="/feed.xml" rel="noreferrer noopener" target="_blank" title="RSS">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-rss">
+  <use href="/assets/rss-541ec5cea9cefd10d2fcfec01888f3f231a8829940249835fa7b7b3a12ae0d0d.svg#icon-rss" xlink:href="/assets/rss-541ec5cea9cefd10d2fcfec01888f3f231a8829940249835fa7b7b3a12ae0d0d.svg#icon-rss"></use>
+</svg>
+
+        </a>
+      </li>
+    
+    
+      <li>
+        <a onclick="toggle()" title="Toggle Theme">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-theme">
+  <use href="/assets/theme-66869e0bf8dab34bae1c86bda400327b772e0be69e8dc28d3ede896e771320ed.svg#icon-theme" xlink:href="/assets/theme-66869e0bf8dab34bae1c86bda400327b772e0be69e8dc28d3ede896e771320ed.svg#icon-theme"></use>
+</svg>
+
+        </a>
+      </li>
+    
+  </ul>
+</nav>
+
+
+
+        <article class="article scrollappear">
+          <header class="article-header">
+            <h1>How I created a UI/UX team in a SaaS startup without any background in design</h1>
+            <p>The calling to venture into design</p>
+            <div class="article-list-footer">
+  <span class="article-list-date">
+    March 12, 2022
+  </span>
+  <span class="article-list-divider">-</span>
+  <span class="article-list-minutes">
+    
+    
+      4 minute read
+    
+  </span>
+  <span class="article-list-divider">-</span>
+  <div class="article-list-tags">
+    
+      
+      <a href="/tag/design" title="See all posts with tag 'Design'">Design</a>
+    
+  </div>
+</div>
+          </header>
+
+          <div class="article-content">
+            <h3 id="the-calling">The Calling</h3>
+<p>I felt it first when I introduced our product to Anand. Though I was proud of the work I do at <a href="https://hellotars.com/?ref=febinjames">Tars</a>, I wasn’t so happy about its looks. I had worked with Anand earlier in building products; even though our product failed to deliver value, it was aesthetically pleasing.</p>
+
+<p>As an engineer, I could see myself creating value in Tars by building the future of conversational interfaces. But it got to a point where I started disliking javascript. Unavoidable boilerplate code I have to write repeatedly. Work got repetitive, and programming isn’t fun anymore.</p>
+
+<p>Our startup is bootstrapped and profitable since we took the interface route instead of pursuing the AI/ML hype. As our customers matured, there was no end to future requests. Most of them were great features that could save people time, effort and money. But they remained in words, moving from Google Docs to Jira to Notion.</p>
+
+<p>Some of which got implemented after a lot of effort and time. Though it was functional, the experience got sacrificed for deliverability. Building software takes time, and I honestly started losing patience since my dream product seemed far away.</p>
+
+<p>One evening as I was writing code to optimize WhatsApp Campaigns, I had a realization. I took a cab to Vinit’s place, and told him “I can’t do this anymore”. During the conversation, he told me “Why don’t you start a design team in this company?”</p>
+
+<h3 id="the-process">The Process</h3>
+<p>My heart started racing faster, life started to get exciting. We started small by taking part of the product and incrementally revamping it. It took us two weeks to hire interns. Sameer’s design stood out, and Priyamwada’s design case study was top-notch among 100s of applicants.</p>
+
+<p>Though I had conducted design thinking workshops in my early 20s, they were not related to visual or UX design. It was more about empathizing with the user’s problem and finding affordable solutions. Later presenting the solution, taking feedback and improving the solution iteratively.</p>
+
+<p>I set up a similar process here.</p>
+
+<p>Conduct interviews with customer success team
+Identify and prioritize pain points
+Competitive research
+Prototype
+Present &amp; Take Feedback
+Iterate
+Following the process is not the difficult part. You might end up making things cool but it need not work. It’s easy for us to get lost on thing that don’t even matter while being blind spotted to obvious and neccessary concerns.</p>
+
+<p>Good design is more than making things look cool. It’s about building interfaces that are not ambiguous, providing actionable insights and empowering your customers to explore the product to its fullest. Such interfaces can be built only when the design team can empathize with the perspectives of different kinds of people.</p>
+
+<p>Our customer success team significantly contributed to identifying interface barriers between the product and the user.</p>
+
+<p>Ish brought a different perspective altogether. His common questions includes: “Why?”, “But, what do I do with it?”, “This part is not clear. Does it do this or does it do that?”.</p>
+
+<p>Vinit understood the suitable threshold of elements that can go in the interface and get too overwhelming.</p>
+
+<p>I made my team understand multiple perspectives, clarifyed intentions and explained technical jargons. Vinit also contributed to this. Slowly I could see Sameer and Priyamwada becoming more independent. My next focus is identifying common patterns in perspective and making them part of the design review process. Hence reducing the feedback loop and design rework.</p>
+
+<h3 id="results">Results</h3>
+<p>WhatsApp Campaigns Before 
+<a href="/assets/WACampaigns-4a56e50238296987afd7bd5a2a055006cb35b6ba4894a0d5532c4f8bcb6a0b87.png">
+  <img src="/assets/WACampaigns-4a56e50238296987afd7bd5a2a055006cb35b6ba4894a0d5532c4f8bcb6a0b87.png" alt="" class="zooming" data-rjs="/assets/WACampaigns-4a56e50238296987afd7bd5a2a055006cb35b6ba4894a0d5532c4f8bcb6a0b87.png" data-zooming-width="2797" data-zooming-height="1340" />
+</a></p>
+
+<p>WhatsApp Campaigns Now (Some parts like main nav yet to be revamped). 
+<a href="/assets/SendNotification1-11c7011b59bba666857eeba720dd1f7780873e035d52cfac907ea675e3fa2e82.png">
+  <img src="/assets/SendNotification1-11c7011b59bba666857eeba720dd1f7780873e035d52cfac907ea675e3fa2e82.png" alt="" class="zooming" data-rjs="/assets/SendNotification1-11c7011b59bba666857eeba720dd1f7780873e035d52cfac907ea675e3fa2e82.png" data-zooming-width="6144" data-zooming-height="3020" />
+</a></p>
+
+<p>Campaign Reports
+<a href="/assets/CampaignsReports-177546630f0877db928b7d271eac1bff905366860cfe93c40e1564f124bf30a3.png">
+  <img src="/assets/CampaignsReports-177546630f0877db928b7d271eac1bff905366860cfe93c40e1564f124bf30a3.png" alt="" class="zooming" data-rjs="/assets/CampaignsReports-177546630f0877db928b7d271eac1bff905366860cfe93c40e1564f124bf30a3.png" data-zooming-width="6144" data-zooming-height="3020" />
+</a></p>
+
+<p>Nothing was more exciting than to see our engineering team ship user flow analytics. 
+<a href="/assets/GambitView-7dd04d27ac55b578f41d35725598e2f57f78ecb9331422f98b02854e29d82375.png">
+  <img src="/assets/GambitView-7dd04d27ac55b578f41d35725598e2f57f78ecb9331422f98b02854e29d82375.png" alt="" class="zooming" data-rjs="/assets/GambitView-7dd04d27ac55b578f41d35725598e2f57f78ecb9331422f98b02854e29d82375.png" data-zooming-width="6144" data-zooming-height="3020" />
+</a></p>
+
+<p>And here’s a preview of what’s coming. 
+<a href="/assets/ChatbotAnalytics-68d2b52963869880bb35426c5a697cbf8c36abb97f78edd036f6bbd4b6e7709e.png">
+  <img src="/assets/ChatbotAnalytics-68d2b52963869880bb35426c5a697cbf8c36abb97f78edd036f6bbd4b6e7709e.png" alt="" class="zooming" data-rjs="/assets/ChatbotAnalytics-68d2b52963869880bb35426c5a697cbf8c36abb97f78edd036f6bbd4b6e7709e.png" data-zooming-width="5760" data-zooming-height="3072" />
+</a></p>
+
+<p>Shipping things out on a deadline isn’t easy. Emmanual and Ankit significantly contributed to implementing the design without compromising the quality.</p>
+
+<h3 id="but">But</h3>
+<p>Yes, to the question, how can someone pull that off without experience in design?</p>
+
+<p>Well, it’s less about me and more about an environment that’s set for growth.</p>
+
+<p>It’s about the leaders who put faith in you when you want to do something in the company that has never been done before.</p>
+
+<p>It’s about our then interns (now FTEs) who are open to constructive feedback and has the curiosity to learn things.</p>
+
+<p>It’s about our colleagues who genuinely want the product to make our customers successful.</p>
+
+<p>We are hiring good people, <a href="https://angel.co/company/tars/jobs">join us</a>.</p>
+
+
+          </div>
+          <div class="article-share">
+            
+            
+            <a href="https://twitter.com/home?status=How+I+created+a+UI/UX+team+in+a+SaaS+startup+without+any+background+in+design%20-%20https://funwithsystems.com/posts/design-calling%20by%20@heyfebin" title="Share on Twitter" rel="noreferrer noopener" target="_blank">
+              <svg viewBox="0 0 512 512"><path d="M492 109.5c-17.4 7.7-36 12.9-55.6 15.3 20-12 35.4-31 42.6-53.6 -18.7 11.1-39.4 19.2-61.5 23.5C399.8 75.8 374.6 64 346.8 64c-53.5 0-96.8 43.4-96.8 96.9 0 7.6 0.8 15 2.5 22.1 -80.5-4-151.9-42.6-199.6-101.3 -8.3 14.3-13.1 31-13.1 48.7 0 33.6 17.2 63.3 43.2 80.7C67 210.7 52 206.3 39 199c0 0.4 0 0.8 0 1.2 0 47 33.4 86.1 77.7 95 -8.1 2.2-16.7 3.4-25.5 3.4 -6.2 0-12.3-0.6-18.2-1.8 12.3 38.5 48.1 66.5 90.5 67.3 -33.1 26-74.9 41.5-120.3 41.5 -7.8 0-15.5-0.5-23.1-1.4C62.8 432 113.7 448 168.3 448 346.6 448 444 300.3 444 172.2c0-4.2-0.1-8.4-0.3-12.5C462.6 146 479 129 492 109.5z"/></svg>
+            </a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://funwithsystems.com/posts/design-calling" title="Share on Facebook" rel="noreferrer noopener" target="_blank">
+              <svg viewBox="0 0 512 512"><path d="M288 192v-38.1c0-17.2 3.8-25.9 30.5-25.9H352V64h-55.9c-68.5 0-91.1 31.4-91.1 85.3V192h-45v64h45v192h83V256h56.4l7.6-64H288z"/></svg>
+            </a>
+          </div>
+
+          
+        </article>
+        
+      </div>
+    </div>
+  </main>
+  
+
+<script src="/assets/vendor-734ddaa553ebf4e6ca703bd7c567ef4a0e43b0ba799607355e56b81e88781318.js" type="text/javascript"></script>
+
+
+  <script src="/assets/webfonts-96493456d319d1bf419afdf8701552d4d486fee6afd304897d4fd81eb4e0cc0b.js" type="text/javascript"></script>
+
+
+
+  <script src="/assets/scrollappear-e2da8ea567e418637e31266cc5302126eaa79f62a2273739086358b589a89ee6.js" type="text/javascript"></script>
+
+
+<script src="/assets/application-eea71a7b2fa25996599e61fe52e5651713d51bbb7088c90299a2a4458ad60b53.js" type="text/javascript"></script>
+
+
+  <script src="/assets/themetoggle-df0d3d73164dc26dffbd630182ae4d0dfa7bee6b694a2b5d565d73595b582bbf.js" type="text/javascript"></script>
+
+</body>
+</html>
